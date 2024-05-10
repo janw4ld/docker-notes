@@ -6,6 +6,14 @@ and cache management. Buildkit comes bundled with new Docker versions as the
 subcommand `buildx`, we'll be using `docker buildx` to compile our
 `HelloKittyexe` project for multiple architecture targets.
 
+## but why??
+
+building to multiple different platforms makes it easy to distribute software
+to single-board computers and other embedded linux devices with unpopular
+architectures, it also makes it easier to compile for devices with underpowered
+hardware, like a Raspberry Pi, locally (& conveniently) in a more powerful dev
+environment
+
 ## prerequisites
 
 Docker virtualisation depends on
