@@ -7,6 +7,10 @@ a bunch of use cases that help the software development process, here are some
 of them:
 
 1. packaging and distributing applications with all their dependencies
+  - [simple c++ example with multi-stage dockerfile](./1-distributing-builds/1-basic-build/)
+  - [a `FROM scratch` final image with static linking](./1-distributing-builds/2-from-scratch/)
+  - TODO: a multiplatform image (amd64 & arm64 support) with qemu virtualisation
+  - TODO: a multiplatform image with cross-compilation
 1. creating controlled reproducible environments for development and testing
 1. isolating applications and their dependencies during runtime
 
