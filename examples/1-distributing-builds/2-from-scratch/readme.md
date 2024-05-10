@@ -1,14 +1,14 @@
 # Dockerfile 2, leaner and meaner?
 
-in 1-basic-build we built a minimal `alpine` image that contained `libstdc++`
-and our `HelloKitty` executable. For security and hardening purposes, it's
-better to not distribute any distro or base image at all. We can do so by
-creating our final-stage image `FROM scratch`, which is an empty image. But
-`FROM scratch` requires manually copying each and every runtime dependency into
-the image. This is a tedious process that can be avoided by statically linking
-our executable so that it contains all its dependencies. So working towards our
-goal of using a `FROM scratch` image we'll modify the `CMakeLists.txt` file to
-statically link our project as follows:
+in [1-basic-build](../1-basic-build/readme.md) we built a minimal `alpine` image 
+that contained `libstdc++` and our `HelloKitty` executable. For security and
+hardening purposes, it's better to not distribute any distro or base image at
+all. We can do so by creating our final-stage image `FROM scratch`, which is an
+empty image. But `FROM scratch` requires manually copying each and every runtime
+dependency into the image. This is a tedious process that can be avoided by
+statically linking our executable so that it contains all its dependencies. So
+working towards our goal of using a `FROM scratch` image we'll modify the
+`CMakeLists.txt` file to statically link our project as follows:
 
 ```diff
 --- ../1-basic-build/CMakeLists.txt	2024-05-10 08:09:10.223873779 +0300
@@ -84,7 +84,7 @@ missed u
 > [!TIP]
 > to repro:
 >
-> ```
+> ```bash
 > docker buildx build \
 >   -t hellokitty:static \
 >   -f static.Dockerfile \

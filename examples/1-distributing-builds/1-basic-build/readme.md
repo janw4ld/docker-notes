@@ -5,11 +5,12 @@ to package and run a containerised application. They consist of instructions
 that run inside a base image and interact with the build context (usually the
 directory our `Dockerfile` is in)
 
-We're gonna build our CMake project 1 inside Docker as an example. It's a good
-practice to keep your docker images and containers lightweight so we'll pick
-`alpine` linux as our base distro, default alpine images are ~6MiB in size.
-Alpine is different to mainstream distros in some aspects, but we don't need to
-worry about them now.
+We're gonna build our
+[CMake project 1](https://github.com/hlarda/cmake/tree/main/1/cmake) inside
+Docker as an example. It's a good practice to keep your docker images and
+containers lightweight so we'll pick `alpine` linux as our base distro, default
+alpine images are ~6MiB in size. Alpine is different to mainstream distros in
+some aspects but we don't need to worry about them now.
 
 Our build environment consists of CMake & GNU Make as well as the `g++`
 compiler, so a Dockerfile to build it can look like this:
