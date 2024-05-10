@@ -201,3 +201,6 @@ hellokitty   two-stage   3f4aa916656e   35 minutes ago   10.3MB
 hellokitty   naive       9883f974623c   37 minutes ago   271MB
 ```
 
+## further reading
+
+- [Docker multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)

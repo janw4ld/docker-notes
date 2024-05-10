@@ -139,3 +139,8 @@ docker: Error response from daemon: failed to create task for container: failed 
 
 security; the less programs you package, the less attack surface you have,
 especially when you don't distribute any shell or package manager in your image
+
+## further reading
+
+- [Dockerfile general best practices](https://docs.docker.com/develop/develop-images/guidelines/)
+
