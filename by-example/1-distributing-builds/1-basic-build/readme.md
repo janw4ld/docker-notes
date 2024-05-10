@@ -204,3 +204,6 @@ hellokitty   naive       9883f974623c   37 minutes ago   271MB
 ## further reading
 
 - [Docker multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
+- [Distroless Docker - Mathew Moore](https://www.youtube.com/watch?v=lviLZFciDv4),
+  explains why we use `alpine`, `FROM scratch` and why google came up with
+  `distroless` as a more convenient middle ground.
