@@ -43,12 +43,13 @@ CMD ["./HelloKittyexe"]
 we'll save this file as `naive.Dockerfile` then use `docker build` to create an
 image from it. the used command options are
 
-- `-t hellokitty:naive` adds the a "tag" or human readable name to the image
+- `-t hellokitty:naive` adds a "tag" -a human readable name- to the image
 - `-f naive.Dockerfile` specifies which dockerfile to use
 - `.` specifies the build context, which is the directory our dockerfile
   instructions will interact with, so for example `COPY main.cpp` in the
   dockerfile only knows which `main.cpp` to copy because we're inside the
-  `1-basic-build` directory and passed the build context `.` (which means here)
+  `1-basic-build` directory and passed the build context `.` (which means here
+  or the current working directory)
 
 ```console
 $ docker build \

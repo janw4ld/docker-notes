@@ -12,9 +12,10 @@ of virtualised, this is made explicit by buildkit in the build logs where our
 arm64 image's steps will be prefixed with `[linux/amd64->arm64]` instead of just
 `[linux/amd64]` like in [3-multiplatform](../3-multiplatform/).
 
-`$BUILDPLATFORM` and `$TARGETPLATFORM` are build arguments that buildkit injects
-into the build context to help us determine the host and target architectures in
-a multiplatform build.
+> [!NOTE]
+> `$BUILDPLATFORM` and `$TARGETPLATFORM` are build arguments that buildkit
+> injects into the build context to help us determine the host and target
+> architectures in a multiplatform build.
 
 ```diff
 --- ../3-multiplatform/Dockerfile	2024-05-10 14:15:29.234439651 +0300

@@ -65,11 +65,15 @@ $ docker buildx build --platform=amd64,arm64 -t hellokitty:multiplatform .
 WARNING: No output specified with docker-container driver. Build result will only remain in the build cache. To push result image into registry use --push or to load image into docker use --load
 ```
 
-notice the WARNING after the build, `buildkit` creates multiplatform images in a
-format not yet supported by docker (a manifest list), trying to `--load` an
-images into the docker registry by default -similar to the legacy builder
-behaviour- will error out. so we need to use `--push` to export the
-multiplatform image to an external registry that supports manifest lists.
+notice the WARNING after the build:
+
+> WARNING: No output specified with docker-container driver. Build result will only remain in the build cache. To push result image into registry use --push or to load image into docker use --load
+
+`buildkit` creates multiplatform images in a format not yet supported by docker
+(a manifest list), trying to `--load` images into the docker registry by default
+-similar to the legacy builder behaviour- will error out. so we need to use
+`--push` to export the multiplatform image to an external registry that supports
+manifest lists.
 
 we'll use dockerhub for this example, our prerequisites now are
 
@@ -80,8 +84,8 @@ we'll use dockerhub for this example, our prerequisites now are
   [guide](https://docs.docker.com/docker-hub/repos/create/), we'll name the repo
   `hellokitty`
 
-after creating the account, the access token and the repo, we'll login to the docker cli
-with this token
+after creating the account, the access token and the repo, we'll login to the
+docker cli with this token
 
 ```console
 $ docker login -u janw4ld

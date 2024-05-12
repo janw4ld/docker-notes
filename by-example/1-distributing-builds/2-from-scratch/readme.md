@@ -6,7 +6,7 @@ hardening purposes, it's better to not distribute any distro or base image at
 all. We can do so by creating our final-stage image `FROM scratch`, which is an
 empty image. But `FROM scratch` requires manually copying each and every runtime
 dependency into the image. This is a tedious process that can be avoided by
-statically linking our executable so that it contains all its dependencies. So
+statically linking our executable so that it contains all its dependencies. So,
 working towards our goal of using a `FROM scratch` image we'll modify the
 `CMakeLists.txt` file to statically link our project as follows:
 

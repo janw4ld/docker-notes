@@ -10,7 +10,7 @@ of them:
    - [simple c++ example with multi-stage dockerfile](./1-distributing-builds/1-basic-build/)
    - [a `FROM scratch` final image with static linking](./1-distributing-builds/2-from-scratch/)
    - [a multiplatform image (amd64 & arm64 support) with qemu virtualisation](./1-distributing-builds/3-multiplatform/)
-   - [WIP: a multiplatform image with cross-compilation](./1-distributing-builds/4-cross-compiled/)
+   - [a multiplatform image with cross-compilation](./1-distributing-builds/4-cross-compiled/)
 1. creating controlled reproducible environments for development and testing
 1. isolating applications and their dependencies during runtime
 
