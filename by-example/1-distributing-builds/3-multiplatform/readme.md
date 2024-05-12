@@ -119,7 +119,7 @@ $ docker buildx build --platform=amd64,arm64 -t janw4ld/hellokitty:multiplatform
  => [auth] janw4ld/hellokitty:pull,push token for registry-1.docker.io                                                              0.0s
 ```
 
-notice [our image on dockerhub](https://hub.docker.com/repository/docker/janw4ld/hellokitty/tags)
+notice [our image on dockerhub](https://hub.docker.com/r/janw4ld/hellokitty/tags)
 is now a multiplatform image
 
 ![janw4ld/hellokitty on dockerhub](./readme.d/janw4ld-hellokitty.png)
